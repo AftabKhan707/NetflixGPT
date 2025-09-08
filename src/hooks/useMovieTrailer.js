@@ -17,7 +17,7 @@ const useMovieTrailer = (movie_id) => {
     const data = await fetch(url, options);
     const videos = await data.json();
     const video = videos.results.filter((obj) => obj.type === "Trailer");
-    console.log("In dispatch");
+    // console.log("In dispatch");
     dispatch(addTrailerVideo(video[0]));
   };
   useEffect(() => {
