@@ -101,27 +101,15 @@ firebase deploy --only hosting
 
 Tip: firebase init hosting:github adds a GitHub Action to auto-deploy on push/merge.
 
-📁 Suggested Folder Structure
+📁 Folder Structure
 src/
   components/
   hooks/
-  pages/
-  store/
-  services/     # API clients, GPT helpers
-  styles/
+  utils/
+        store.js/ 
   App.jsx
 
-🧪 Nice Extras (already/optionally included)
 
-Shimmer/skeleton loaders for perceived performance.
-
-Debounced search for fewer API calls.
-
-Error boundaries + fallback UI.
-
-Code-splitting with React.lazy/Suspense (optional).
-
-ESLint + Prettier (optional config).
 
 🗺️ Roadmap
 
