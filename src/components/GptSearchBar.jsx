@@ -38,7 +38,7 @@ const GptSearchBar = () => {
       dangerouslyAllowBrowser: true,
     });
 
-    console.log("client", client);
+    // console.log("client", client);
 
     const gptQuery =
       "Act as a Movie Recommendation system and suggest some movies for the query : " +

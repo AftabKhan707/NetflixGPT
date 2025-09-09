@@ -14,7 +14,6 @@ import { addUser } from "../utils/userSlice";
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
   const [errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const email = useRef(null);
@@ -48,6 +47,7 @@ const Login = () => {
               // Profile updated!
               // ...
               const { uid, email, displayName, photoURL } = auth.currentUser;
+              // console.log("In photoURL", photoURL);
               dispatch(
                 addUser({
                   uid: uid,
@@ -61,7 +61,7 @@ const Login = () => {
               // An error occurred
               // ...
             });
-          console.log(user);
+          // console.log(user);
           // ...
         })
         .catch((error) => {
@@ -79,6 +79,7 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
+          // console.log("User Information", user);
 
           // ...
         })
